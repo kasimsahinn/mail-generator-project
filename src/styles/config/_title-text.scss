@@ -1,0 +1,62 @@
+.title {
+  &--base {
+    font-family: $font-family-base;
+  }
+  &--second {
+    font-family: $font-family-second;
+  }
+  &--xxl {
+    & > * {
+      @include text(22, 400, $c-text);
+    }
+  }
+  &--xl {
+    & > * {
+      @include text(22, 400, $c-text);
+    }
+  }
+  &--lg {
+    //  38 - 36
+    & > * {
+      @include text(38, 400, $c-text);
+      @include bp(tablet) {
+        font-size: rem(30);
+      }
+    }
+  }
+  &--md {
+    // 28 - 26
+    & > * {
+      @include text(26, 400, $c-text);
+    }
+  }
+  &--sm {
+    & > * {
+      @include text(20, 400, $c-text);
+    }
+  }
+  &--xs {
+    & > * {
+      @include text(16, 400, $c-text);
+    }
+  }
+  &--heavy {
+    & > * {
+      font-weight: 800;
+    }
+  }
+  &--uppercase {
+    & > * {
+      text-transform: uppercase;
+    }
+  }
+  &--white {
+    & > * {
+      color: #fff;
+    }
+  }
+}
+
+.text {
+  color: $c-text;
+}

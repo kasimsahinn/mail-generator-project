@@ -1,0 +1,125 @@
+/* BASE */
+$base-fontsize: 16;
+
+/* MULTIPLIERS */
+
+$multipler: (
+  320px: 0.8,
+  375px: 1,
+  429px: 1,
+  560px: 1,
+  768px: 1,
+  1024px: 0.7,
+  1280px: 0.7,
+  1366px: 0.75,
+  1440px: 0.75,
+  1600px: 0.9,
+  1920px: 1,
+  2560px: 1.1,
+);
+
+// Color
+$c-white: #ffffff;
+$c-orange: #ffa948;
+$c-orange-2: #ef7550;
+$c-border: #e4e3ec;
+$c-grid: rgba($c-border, 0.1);
+$c-text: #280041;
+$c-text2: #160041;
+$c-red: #ff6e6e;
+$c-blue: #4090f7;
+$c-green: #62d87d;
+$c-green-card: #8ce228;
+$c-green-light: #b2db42;
+$c-green-4: #69c400;
+$c-purple: #6034a3;
+$c-facebook: #2359be;
+$c-google: #e85953;
+$c-gray: #f1eff3;
+$c-gray-2: #fafbfc;
+
+$c-level-1: #eddf73;
+$c-level-2: #ffc048;
+$c-level-3: #ff6b48;
+$c-level-4: #e22d2d;
+$c-level-5: #800e0e;
+
+$c-overlay: rgba(#13001f, 0.2);
+
+$c-text-op2: rgba($c-text, 0.02);
+$c-text-op5: rgba($c-text, 0.05);
+
+// Transition
+$transition: 0.15s ease-in-out;
+$transition-cubic: 0.2s cubic-bezier(0.21, 1.09, 1, 0.99);
+$transition-cubic2: 0.3s cubic-bezier(0.21, 1.09, 1, 0.99);
+$transition-cubic3: 0.4s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+$transition-fast: 0.1s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+
+// Font Size
+$fs-14: 1.4rem;
+$fs-17: 1.7rem;
+$fs-18: 1.8rem;
+$fs-19: 1.9rem;
+$fs-20: 2rem;
+$fs-22: 2.2rem;
+$fs-26: 2.6rem;
+$fs-28: 2.8rem;
+$fs-30: 3rem;
+$fs-36: 3.6rem;
+$fs-70: 7rem;
+
+$fs-button: 1.4rem;
+
+// Font Weight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-heavy: 800;
+
+$fs-title-xxl: rem(50);
+$fs-title-xl: rem(50);
+$fs-title-lg: rem(50);
+$fs-title-md: rem(50);
+$fs-title-sm: rem(50);
+$fs-title-xs: rem(50);
+
+//Container
+// $container-width: 81.1%;
+$container-width: rem(1400);
+// $container-width-2: 71.8%;
+$container-width-2: rem(1200);
+
+/* Font Families*/
+$font-family-base: "Gilmer";
+$font-family-second: "Krona One";
+
+/* Box Shadows */
+
+/* Input */
+$p: rem(94);
+$container-width-medium: rem(1240);
+
+#app {
+  @media (max-width: 346px) {
+    $container-width: 92% !important;
+  }
+  @media (max-width: 576px) {
+    $container-width: calc(92%);
+  }
+  @media (min-width: 576px) {
+    $container-width: 92%;
+  }
+
+  @media (min-width: 768px) {
+    $container-width: 720px;
+  }
+  @media (min-width: 992px) {
+    $container-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    $container-width: 1150px;
+  }
+}
