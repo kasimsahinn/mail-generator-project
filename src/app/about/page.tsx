@@ -1,16 +1,11 @@
 import { MailingCard } from '@/components/Cards/MailingCard/MailingCard';
-import Layout from '@/components/Layout/SiteLayout/Layout';
 import styles from "@/styles/index.module.scss";
-import { THomeProps } from '@/types/home';
+import { IHomeProps } from '@/types/home';
 import { getHomePageData } from '@/utilities/services';
-import { GetServerSideProps } from 'next';
-import { ReactElement } from 'react';
 
-type Props = {
-  content?: THomeProps;
-};
 
-const Page = ({content} : Props) => {
+const Page = async () => {
+  const data = await getData();
 
   return (
     <div className={styles.main_section}>
@@ -23,9 +18,11 @@ const Page = ({content} : Props) => {
     <section className={styles.content}>
       <div className={styles.list}>
         <>
+        <div>
+
+        {JSON.stringify(data.data.map((a) => (a.attributes.title)))}
+        </div>
         
-        <span>{content?.attributes}</span>
-        <MailingCard/>
         <MailingCard/>
         <MailingCard/>
         </>
@@ -37,17 +34,13 @@ const Page = ({content} : Props) => {
 
 
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getData = async ():Promise<IHomeProps> => {
   const content = await getHomePageData();
-  return {
-    props: {
-      content,
-    },
-  };
+  console.log(content)
+  return content
+  
 };
 
-Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};
+
 
 export default Page;

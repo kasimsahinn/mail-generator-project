@@ -1,7 +1,10 @@
 
-const DEV_URL = 'http://localhost:1337/api';
+// const DEV_URL = 'https://jsonplaceholder.typicode.com/todos/1';
+const DEV_URL = 'http://127.0.0.1:1337/api';
+
 
 export const API_LIST = {
-  cardList: DEV_URL + '/card-lists',
+  abouts: DEV_URL + '/abouts',
+
 };
 

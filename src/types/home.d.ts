@@ -1,25 +1,28 @@
-export type THomeProps = {
-  id?: number;
-  attributes?: TMailingCardAttr[];
-};
+export interface IHomeProps {
+  data: Daum[]
+  meta: Meta
+}
 
-export type THomePropsAttr = {
-  title?: string;
-  createdAt?: string;
-  publishedAt?: string;
-  updatedAt?: string;
-};
+export interface Daum {
+  id: number
+  attributes: Attributes
+}
 
+export interface Attributes {
+  title: string
+  description: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+}
 
-export interface IHomeProps  {
-  id?: number;
-  attributes?: IMailingCardAttr[];
-  
-};
+export interface Meta {
+  pagination: Pagination
+}
 
-export interface IHomePropsAttr  {
-  title?: string;
-  createdAt?: string;
-  publishedAt?: string;
-  updatedAt?: string;
-};
+export interface Pagination {
+  page: number
+  pageSize: number
+  pageCount: number
+  total: number
+}

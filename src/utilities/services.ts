@@ -7,14 +7,14 @@ const authHeaders: HeadersInit = {
 };
 
 const getHomePageData = async () => {
-  const req = await fetch(API_LIST.cardList, {
+  const req = await fetch(API_LIST.abouts, {
     method: 'GET',
     headers: {
       ...authHeaders,
     },
   });
   const res: IHomeProps = await req.json();
-
+  console.log("deneme")
   return res;
 };
 
