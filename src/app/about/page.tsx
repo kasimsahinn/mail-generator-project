@@ -1,26 +1,46 @@
 import { MailingCard } from '@/components/Cards/MailingCard/MailingCard';
 import styles from "@/styles/index.module.scss";
-import Link from 'next/link';
+import { IHomeProps } from '@/types/home';
+import { getHomePageData } from '@/utilities/services';
 
-const Page =  () => {
+
+const Page = async () => {
+  const data = await getData();
 
   return (
     <div className={styles.main_section}>
     <header>
       <div className={styles.header}>
+
       </div>
-      <Link href="about">About</Link>
     </header>
 
     <section className={styles.content}>
       <div className={styles.list}>
+        <>
+        <div>
+
+        {JSON.stringify(data.data.map((a) => (a.attributes.title)))}
+        </div>
+        
         <MailingCard/>
         <MailingCard/>
+        </>
       </div>
     </section>
   </div>
   );
 };
+
+
+
+const getData = async ():Promise<IHomeProps> => {
+  const content = await getHomePageData();
+  console.log(content)
+  return content
+  
+};
+
 
 
 export default Page;
