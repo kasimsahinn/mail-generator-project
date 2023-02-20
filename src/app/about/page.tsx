@@ -34,7 +34,7 @@ const Page = async () => {
 
 
 
-export const getData = async ():Promise<IHomeProps> => {
+const getData = async ():Promise<IHomeProps> => {
   const content = await getHomePageData();
   console.log(content)
   return content
